@@ -1,0 +1,314 @@
+:root {
+  --text-main: #202124;
+  --text-muted: #5f6368;
+  --border: #dfe1e5;
+  --bg-light: #f8f9fa;
+  --bg-footer: #f2f2f2;
+  --focus: #1a73e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: var(--text-main);
+}
+
+header {
+  padding: 16px 24px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  color: var(--text-muted);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.icon-btn:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 16px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 8px 12px;
+  background: #fff;
+}
+
+.search-bar:hover,
+.search-bar:focus-within {
+  box-shadow: 0 1px 6px rgba(32,33,36,.28);
+  border-color: transparent;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin: 0 8px;
+}
+
+.icon-left {
+  color: var(--text-muted);
+}
+
+.search-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  border: none;
+  background: #eef1f3;
+  cursor: pointer;
+}
+
+.ai-btn:hover {
+  background: #e1e4e7;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid var(--bg-light);
+  background: var(--bg-light);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  border-color: #dadce0;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.btn:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.language-text {
+  font-size: 13px;
+}
+
+.language-text a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.language-text a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--bg-footer);
+  font-size: 14px;
+  color: #70757a;
+}
+
+.footer-location {
+  padding: 12px 24px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  flex-wrap: wrap;
+}
+
+.link-group {
+  display: flex;
+  gap: 24px;
+}
+
+footer a {
+  color: #70757a;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* โทรศัพท์ */
+@media (max-width: 480px) {
+  nav {
+    gap: 8px;
+    font-size: 12px;
+  }
+  .logo svg {
+    width: 280px;
+  }
+  .search-bar {
+    padding: 6px 10px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+
+/* ไอเเพด */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    gap: 12px;
+    font-size: 13px;
+  }
+  .logo svg {
+    width: 340px;
+  }
+  .search-bar {
+    padding: 8px 10px;
+  }
+
+  .search-bar input {
+    font-size: 15px;
+  }
+
+  .buttons {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 0 14px;
+    font-size: 14px;
+  
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+
+ /* คอม */
+@media (min-width: 769px) {
+
+  nav {
+    gap: 16px;
+    font-size: 13px;
+  }
+  .logo svg {
+    width: 420px;
+  }
+
+  .search-bar {
+    padding: 8px 12px;
+  }
+
+  .search-bar input {
+    font-size: 16px;
+  }
+  .buttons {
+    gap: 12px;
+    flex-direction: row;
+  }
+  .btn {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+  .footer-links {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+}
